@@ -1,42 +1,63 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>HTML Login Form</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h2 {
+            color: #fff;
+        }
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .login-input::placeholder {
+            color: #ddd;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #764ba2;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login-button:hover {
+            background: #ddd;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="main">
-        <h1>GeeksforGeeks</h1>
-        <h3>Enter your login credentials</h3>
-
-        <form action="">
-            <label for="first">
-                Username:
-            </label>
-            <input type="text" id="first" name="first" 
-                placeholder="Enter your Username" required>
-
-            <label for="password">
-                Password:
-            </label>
-            <input type="password" id="password" name="password" 
-                placeholder="Enter your Password" required>
-
-            <div class="wrap">
-                <button type="submit">
-                    Submit
-                </button>
-            </div>
-        </form>
-        
-        <p>Not registered?
-            <a href="#" style="text-decoration: none;">
-                Create an account
-            </a>
-        </p>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" class="login-input" placeholder="Username">
+        <input type="password" class="login-input" placeholder="Password">
+        <button class="login-button">Login</button>
     </div>
 </body>
-
 </html>
